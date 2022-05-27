@@ -1,0 +1,43 @@
+{% extends 'template.html' %} 
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<body>
+    
+    <div class="card-book">
+       
+        <a href="{% url 'book' %}">
+            <i class="fas fa-chevron-circle-left fa-2x" style="color: #406882;  margin-top: 1.5rem; padding: 0px;"></i>
+        </a>
+      
+        <h4 class="headline " style="margin-top:0rem; margin-bottom: 2rem; color: #406882; font-size:35px;">Your Booking</h4>
+        <br>
+        <form >
+
+            {% for book in booking_mu %}
+               
+                <label class='labelan' for='nama_lengkap'>Nama Lengkap</label><br>
+                <div class='inputan'>{{book.nama}}</div>
+
+                <label class='labelan' for='alamat'>Alamat</label><br>
+                <div class='inputan'>{{book.alamat}}</div>
+               
+                <label class='labelan' for='no_ktp'>Nomor KTP</label><br>
+                <div class='inputan'>{{book.noktp}}</div>
+
+                <label class='labelan' for='tanggal_book'>Tanggal Booking</label><br>
+                <div class='inputan'>{{book.tanggal}}</div>
+                
+                <label class='labelan' for='keterangan'>Jam Booking</label><br>
+                <div class='inputan'>{{book.jam}}</div>
+
+                <p class="text2">NB : Silahkan konfirmasi langsung ke masjid satu hari sebelum jadwal </p>
+            
+            {% endfor %}
+        </form>
+
+    </div>
+</body> 
+{% endblock %}

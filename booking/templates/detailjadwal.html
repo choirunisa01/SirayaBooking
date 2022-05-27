@@ -1,0 +1,152 @@
+{% extends 'template.html' %} 
+{% load static %}
+
+
+{% block content %}
+<body>
+    <div class="card-book" style="box-shadow: -18px 10px 5px 5px rgba(107, 104, 104, 0.19);">
+        <a href="{% url 'home' %}" class="">
+            <i class="fas fa-chevron-circle-left fa-2x" style="color: #406882;  margin-top: 1.5rem; padding: 0px;"></i>
+        </a>
+        <section class="side-calender">
+            <div class="font">
+              <h2 style="font-family: 'Playfair Display';left: 100px; color: #406882; font-size:35px;">Jadwal Booking</h2>
+            </div> 
+                <div style="max-width: 65%;">
+                    <div>
+                        <ul>
+                            <li style="padding : 2rem;"> 
+                                
+                                <div class="calendar">
+                                  <div class="calendar__opts">
+                                    <select name="calendar__month" id="calendar__month">
+                                      <option>Januari</option>
+                                      <option>Februari</option>
+                                      <option>Maret</option>
+                                      <option>April</option>
+                                      <option selected>Mei</option>
+                                      <option>Juni</option>
+                                      <option>Juli</option>
+                                      <option>Agustus</option>
+                                      <option>September</option>
+                                      <option>Oktober</option>
+                                      <option>November</option>
+                                      <option>Desember</option>
+                                    </select>
+    
+                                    <select name="calendar__year" id="calendar__year">
+                                      <option>2017</option>
+                                      <option>2018</option>
+                                      <option>2019</option>
+                                      <option>2020</option>
+                                      <option>2021</option>
+                                      <option selected>2022</option>
+                                    </select>
+                                  </div>
+    
+                                  <div class="calendar__body">
+                                    <div class="calendar__days">
+                                      <div>Min</div>
+                                      <div>Sen</div>
+                                      <div>Sel</div>
+                                      <div>Rab</div>
+                                      <div>Kam</div>
+                                      <div>Jum</div>
+                                      <div>Sab</div>
+                                    </div>
+    
+                                    <div class="calendar__dates">
+                                      
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>1</span></div>
+                                      <div class="calendar__date"><span>2</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>3</span></div>
+                                      <div class="calendar__date"><span>4</span></div>
+                                      <div class="calendar__date"><span>5</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>6</span></div>
+                                      <div class="calendar__date"><span>7</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>8</span></div>
+                                      <div class="calendar__date"><span>9</span></div>
+                                      <div class="calendar__date"><span>10</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>11</span></div>
+                                      <div class="calendar__date"><span>12</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>13</span></div>
+                                      <div class="calendar__date"><span>14</span></div>
+                                      <div class="calendar__date"><span>15</span></div>
+                                      <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>16</span></div>
+                                      <div class="calendar__date"><span>17</span></div>
+                                      <div class="calendar__date"><span>18</span></div>
+                                      <div class="calendar__date"><span>19</span></div>
+                                      <div class="calendar__date"><span>20</span></div>
+                                      <div class="calendar__date"><span>21</span></div>
+                                      <div class="calendar__date"><span>22</span></div>
+                                      <div class="calendar__date"><span>23</span></div>
+                                      <div class="calendar__date"><span>24</span></div>
+                                      <div class="calendar__date"><span>25</span></div>
+                                      <div class="calendar__date"><span>26</span></div>
+                                      <div class="calendar__date"><span>27</span></div>
+                                      <div class="calendar__date"><span>28</span></div>
+                                      <div class="calendar__date"><span>29</span></div>
+                                      <div class="calendar__date"><span>30</span></div>
+                                      <div class="calendar__date"><span>31</span></div>
+                                      <div class="calendar__date calendar__date--grey"><span>1</span></div>
+                                      <div class="calendar__date calendar__date--grey"><span>2</span></div>
+                                      <div class="calendar__date calendar__date--grey"><span>3</span></div>
+                                      <div class="calendar__date calendar__date--grey"><span>4</span></div>
+                                    </div>
+                                  </div>
+                                  </div>
+                                
+    
+                                
+                            </li>
+    
+                           
+            
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+              <h3 style="padding: 20px 0px">Silahkan klik pada tanggal untuk melihat detail jadwal</h3>
+                </section>
+    </div>
+            <div class="row" id="body-row"> 
+                <div class="right">
+                    <div class="sidebar">
+                      <a href="{% url 'jadwal' %}">
+                        <div class="close-btn">
+                          <i class="fas fa-times"></i>
+                        </div>
+                      </a>
+                        <div style="padding : 75px 25px;" id="box-satu mt-2">
+                            <h3 class="font">Detail Jadwal</br>Jumat, 20 Mei 2022</h3>
+                        </div>              
+                        <ul>
+                            <li class="card-table">
+                                <div>
+                                    <span class="timetable">08.00 - 10.00</span>
+                                    <span class="status-full">Full</span>                                                                      
+                                </div>
+                            </li>
+
+                            <li class="card-table">
+                                <span class="timetable">10.00 - 12.00</i></span>
+                                <span class="status-full">Full</span>
+                            </li>
+                            <li class="card-table">
+                                <a href="{% url 'book' %}">
+                                    <span class="timetable">14.00 - 16.00</i></span>
+                                    <span class="status-available">Booking Now</span>
+                                </a>
+                            </li>
+                            <li class="card-table">
+                                <span class="timetable">16.00 - 18.00</i></span>
+                                <span class="status-full">Full</span>
+                            </li>                           
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+   
+</body> 
+{% endblock %}

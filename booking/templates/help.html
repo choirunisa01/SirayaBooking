@@ -1,0 +1,75 @@
+{% extends 'template.html' %} 
+{% load static %}
+
+
+{% block content %}
+
+<body >
+    <div class="card-book" style="box-shadow: -18px 10px 5px 5px rgba(107, 104, 104, 0.19);">
+    <i class="help-lines"></i>
+        <a href="{% url 'home' %}" class="">
+            <i class="fas fa-chevron-circle-left fa-2x" style="color: #406882;  margin-top: 1.5rem; padding: 0px;"></i>
+        </a>
+        <section class="">
+            <div class="font">
+              <center><h2 style="font-family: 'Playfair Display';left: 20px; color: #406882; font-size:35px;">Help</h2></center>
+            </div> 
+                <div class="help" style="max-width: 36%; left: 130px">
+                    <div>
+                        <ul >
+                            <li style="padding : 2rem;"> 
+                                <span align="justify" >
+                                        <p style="padding: 30px 0px">Apa itu SiRaya Booking ?</p>
+                                        <p style="font-weight: normal">SiRaya Booking merupakan sebuah aplikasi berbasis web yang digunakan untuk 
+                                            memberikan informasi terkait jadwal akad nikah yang dilaksanakan di Masjid Raya Baiturrahman, 
+                                            Banda Aceh. Pada aplikasi ini user dapat melakukan booking jadwal nikah sesuai dengan jadwal 
+                                            yang diinginkan. 
+                                        </p>
+                                        <p style="padding: 30px 0px">Bagaimana cara melakukan booking ?</p>
+                                        <p style="font-weight: normal">Bagi yang ingin melakukan booking dapat langsung memilih jadwal yang diinginkan, 
+                                            jika jadwal yang diinginkan tersebut masih tersedia, maka dapat langsung dilakukan konfirmasi 
+                                            bookingan. 
+                                        </p>
+                                        <p style="padding: 30px 0px">Dimana dapat melihat hasil booking ?</p>
+                                        <p style="font-weight: normal">Hasil booking dapat dilihat pada halaman “Your Booking”.  Hasil booking akan 
+                                            menampilkan jadwal booking, nama, no ktp dan semua data yang telah di isi pada halaman booking.  
+                                        </p>
+                                </span>                                                                    
+                            </li>                                      
+                        </ul>                        
+                    </div>                    
+              </div>    
+              
+              <div class="help" style="max-width: 36%; left: 43rem; top: -580px;">
+              <div>
+                        <ul >
+                            <li style="padding : 2rem;"> 
+                                <span align="justify" >
+                                        <p style="padding: 30px 0px">Bagaimana cara melihat jadwal yang kosong ?</p>
+                                            <p style="font-weight: normal">Untuk melihat jadwal mana saja yang kosong dapat dilihat pada halaman view schedule. 
+                                                Pada halaman tersebut dapat dilihat detail jadwal yang kosong dan dapat dilihat jam pada tanggal tersebut. 
+                                            </p>
+                                        <p style="padding: 30px 0px">Apa yang harus dilakukan setelah selesai booking ?</p>
+                                        
+                                        <p style="font-weight: normal">Setelah selesai melakukan booking, maka data yang dimasukkan pada halaman booking sudah masuk kedalam list booking. 
+                                            Booking akan tersimpan otomatis apabila jadwal yang dipilih masih kosong. 
+                                        </p>
+
+                                        <p style="padding: 30px 0px">Apakah perlu melakukan konfirmasi lagi?</p>
+                                        
+                                        <p style="font-weight: normal">Satu hari sebelum jadwal yang telah di booking, harus melakukan konfirmasi 
+                                            secara langsung ke masjid raya baiturrahman.   
+                                        </p>
+                                </span>                                                                    
+                            </li>                                      
+                        </ul>
+                        
+                        
+                    </div>                  
+              </div>   
+          </section>
+    </div>
+            
+</body> 
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'template.html' %} 
+{% load static %}
+
+
+{% block content %}
+<body>
+    
+    <div class="card-book" style="box-shadow: -18px 10px 5px 5px rgba(0, 0, 0, 0.19);">
+        <a href="{% url 'detailjadwal' %}" class="">
+            <i class="fas fa-chevron-circle-left fa-2x" style="color: #406882;  margin-top: 1.5rem; padding: 0px;"></i>
+        </a>
+
+        <h4 class="headline " style="margin-top:0rem; margin-bottom: 2rem; color: #406882; font-size:35px;">Booking Form</h4>
+        <br>
+        {% if submitted %}
+            Kamu Berhasil Membooking Jadwal !!
+        {% else %}
+            <form method="POST" action="" >
+                {% csrf_token %}
+
+                <label class='labelan' for='nama_lengkap'>Nama Lengkap</label><br>
+                {{ form.nama }}
+               
+                <label class='labelan' for='alamat'>Alamat</label><br>
+                {{ form.alamat }}
+               
+                <label class='labelan' for='no_ktp'>Nomor KTP</label><br>
+                {{ form.noktp }}
+               
+                <label class='labelan' for='tanggal_book'>Tanggal Booking</label><br>
+                {{ form.tanggal }}
+                             
+                <label class='labelan' for='keterangan'>Jam Booking</label><br>
+                <h5>{{ form.jam }}</h5> 
+
+                <button class="btn" type="submit" name="submit" value="booking" >Booking</button>
+
+            </form>
+        {% endif %}
+    </div>
+</body> 
+{% endblock %}
